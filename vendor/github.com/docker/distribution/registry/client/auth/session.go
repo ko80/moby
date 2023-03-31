@@ -241,7 +241,7 @@ func NewTokenHandlerWithOptions(options TokenHandlerOptions) AuthenticationHandl
 func (th *tokenHandler) client() *http.Client {
 	return &http.Client{
 		Transport: th.transport,
-		Timeout:   15 * time.Second,
+		Timeout:   120 * time.Second,
 	}
 }
 
